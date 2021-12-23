@@ -57,7 +57,7 @@ const StyledGame = styled(motion.div)`
   }
  
   @media (max-width: 40em){
-   width:70%;
+   width:60%;
  }
   
  
