@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import logo from "../img/logo.png";
-import search from "../img/search.png";
 //Redux and Routes
 import { fetchSearch } from "../actions/gamesAction";
 import { useDispatch } from "react-redux";
@@ -28,7 +27,7 @@ const Nav = () => {
     <StyledNav variants={fadeIn} initial="hidden" animate="show">
       <Logo onClick={clearSearched}>
         <img src={logo} alt="logo" />
-        <h1>Gmdb</h1>
+        <h1>Check</h1>
       </Logo>
       <Input>
         <input value={textInput} onChange={inputHandler} type="text" />
