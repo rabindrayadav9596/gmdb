@@ -152,7 +152,8 @@ const Detail = styled(motion.div)`
 `;
 
 const Stats = styled(motion.div)`
-  background-color: #9d9dcf;
+  /* background-color: #9d9dcf; */
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -184,8 +185,8 @@ const Media = styled(motion.div)`
 `;
 
 const Description = styled(motion.div)`
-background-color: #9d9dcf;
-  margin: 5rem 0rem;
+/* background-color: #9d9dcf; */
+margin: 5rem 0rem;
 `;
 
 export default GameDetail;

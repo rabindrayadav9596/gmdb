@@ -15,5 +15,5 @@ export default Footer;
 
 const Foot = styled(motion.div)`
     min-height: 5vh;
-    background-color: #6C6CC1;
+    /* background-color: #6C6CC1; */
 `

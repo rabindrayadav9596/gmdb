@@ -25,7 +25,7 @@ const Home = () => {
   const { popular, newGames, upcoming, searched } = useSelector(
     (state) => state.games
   );
-  console.log(popular);
+  // console.log(popular);
   return (
     <GameList variants={fadeIn} initial="hidden" animate="show">
       <AnimateSharedLayout type="crossfade">
@@ -92,7 +92,7 @@ const Home = () => {
 };
 
 const GameList = styled(motion.div)`
-  background-color: #6c6cc2;
+  /* background-color: #6c6cc2; */
   padding: 0rem 5rem;
   h2 {
     padding: 5rem 0rem;
@@ -100,12 +100,18 @@ const GameList = styled(motion.div)`
 `;
 
 const Games = styled(motion.div)`
-  background-color: #badbe8;
+  /* background-color: #badbe8; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
   min-height: 80vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-column-gap: 3rem;
   grid-row-gap: 5rem;
+
+  @media (max-width: 45em){
+    
+    box-shadow: none;
+  }
 `;
 
 export default Home;

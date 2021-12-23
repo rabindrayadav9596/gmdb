@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import logo from "../img/logo.png";
+import search from "../img/search.png";
 //Redux and Routes
 import { fetchSearch } from "../actions/gamesAction";
 import { useDispatch } from "react-redux";
@@ -29,49 +30,73 @@ const Nav = () => {
         <img src={logo} alt="logo" />
         <h1>Gmdb</h1>
       </Logo>
-      <form className="search">
+      <Input>
         <input value={textInput} onChange={inputHandler} type="text" />
         <button onClick={submitSearch} type="submit">
-          Search
+          
         </button>
-      </form>
+      </Input>
     </StyledNav>
   );
 };
 
 const StyledNav = styled(motion.nav)`
+  
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  @media (max-width: 30em){
+    display: flex;
+    flex-direction: column;
+    box-shadow : none;
+  }
 
-  background-color: grey;
-  padding: 3rem 5rem;
-  text-align: center;
-  input {
-    width: 30%;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    border: none;
-    margin-top: 1rem;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  @media (max-width: 40em){
+   
+    box-shadow : none;
   }
-  button {
-    font-size: 1.5rem;
-    border: none;
-    padding: 0.5rem 2rem;
-    cursor: pointer;
-    background: #4d7eb5;
-    color: white;
-  }
+ 
+  
 `;
 
 const Logo = styled(motion.div)`
-
+  /* float:left; */
   display: flex;
-  justify-content: center;
+  /* align-items: left; */
+  
   cursor: pointer;
- 
-
   img {
     width: 2rem;
+    height: 2rem;
   }
 `;
 
+const Input = styled(motion.div)`
+  display: flex;
+  text-align: center;
+  
+  input {
+     
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      border: none;
+      margin-top: 1rem;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    }
+    button {
+      font-size: 1.5rem;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      
+    }
+    button::before {
+     content: "🔎 ";
+    }
+
+`
 export default Nav;
