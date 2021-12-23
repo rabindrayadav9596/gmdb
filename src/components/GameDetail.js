@@ -122,7 +122,7 @@ const CardShadow = styled(motion.div)`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5;
+  
 
   &::-webkit-scrollbar {
     width: 0.5rem;
@@ -150,6 +150,7 @@ const Detail = styled(motion.div)`
   img {
     width: 100%;
   }
+  
 `;
 
 const Stats = styled(motion.div)`
@@ -163,10 +164,14 @@ const Stats = styled(motion.div)`
     height: 2rem;
     display: inline;
   }
+  @media (max-width: 52em){
+    flex-direction: column;
+  }
 `;
 const Info = styled(motion.div)`
  
   text-align: center;
+  
 `;
 const Platforms = styled(motion.div)`
  
@@ -175,6 +180,11 @@ const Platforms = styled(motion.div)`
   img {
     margin-left: 3rem;
   }
+  @media (max-width: 38em){
+    flex-direction: column;
+    justify-content: left;
+  }
+
 `;
 
 const Media = styled(motion.div)`
