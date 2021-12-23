@@ -53,6 +53,7 @@ const Home = () => {
         <h2>Upcoming Games</h2>
         <Games>
           {upcoming.map((game) => (
+            
             <Game
               name={game.name}
               released={game.released}

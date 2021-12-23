@@ -1,6 +1,7 @@
 import React from "react";
 //Components and pages
 import Home from "./pages/Home";
+import GameDetail from "./components/GameDetail";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 //Styles
@@ -10,11 +11,14 @@ import { Route } from "react-router-dom";
 
 function App() {
   return (
-    <div >
+    <div className="App">
       <GlobalStyles />
       <Nav />
-      <Route path={["/game/:id", "/"]}>
+      <Route path={[ "/"]} exact>
         <Home />
+      </Route>
+      <Route path={["/game/:id"]} exact>
+        <GameDetail />
       </Route>
       <Footer />
     </div>
